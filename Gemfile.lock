@@ -52,8 +52,14 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
     ast (2.3.0)
+    autoprefixer-rails (7.1.6)
+      execjs
     backports (3.11.0)
+    backticks (1.0.2)
     bindex (0.5.0)
+    bootstrap (4.0.0.alpha6)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
     bson (4.3.0)
     builder (3.2.3)
     byebug (9.1.0)
@@ -97,11 +103,17 @@ GEM
     cucumber-wire (0.0.1)
     database_cleaner (1.6.2)
     diff-lcs (1.3)
+    docker-api (1.34.0)
+      excon (>= 0.47.0)
+      multi_json
+    docker-compose (1.1.7)
+      backticks (~> 1.0)
     email_spec (2.1.1)
       htmlentities (~> 4.3.3)
       launchy (~> 2.1)
       mail (~> 2.6)
     erubi (1.7.0)
+    excon (0.60.0)
     execjs (2.7.0)
     factory_bot (4.8.2)
       activesupport (>= 3.0.0)
@@ -118,6 +130,13 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    jquery-rails (4.3.1)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
+    jquery-turbolinks (2.1.0)
+      railties (>= 3.1.0)
+      turbolinks
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.1.5)
@@ -152,6 +171,7 @@ GEM
     parallel (1.12.1)
     parser (2.4.0.2)
       ast (~> 2.3)
+    popper_js (1.12.5)
     powerpack (0.1.1)
     public_suffix (3.0.1)
     puma (3.11.2)
@@ -242,6 +262,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    tether-rails (1.4.0)
+      rails (>= 3.1)
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
@@ -268,17 +290,24 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap (= 4.0.0.alpha6)
   byebug
   capybara (~> 2.14)
   coffee-rails (~> 4.2)
   cucumber-rails (~> 1.5)
   database_cleaner (~> 1.6, >= 1.6.1)
+  docker-api
+  docker-compose
   email_spec (~> 2.1)
   factory_bot_rails (~> 4.8)
   jbuilder (~> 2.5)
+  jquery-rails
+  jquery-turbolinks
   listen (>= 3.0.5, < 3.2)
   mongoid (~> 6.2.0)
+  mongoid-compatibility
   mongoid-rspec!
+  popper_js (~> 1.11, >= 1.11.1)
   puma (~> 3.7)
   rails (~> 5.1.4)
   rspec-rails (~> 3.6)
@@ -286,6 +315,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  tether-rails
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
